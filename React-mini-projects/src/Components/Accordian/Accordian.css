@@ -1,0 +1,89 @@
+
+/* Main wrapper */
+.wrapper {
+    width: 100%;
+     flex-direction: column;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+    background: #f3f0ff;
+    display: flex;
+   
+}
+
+/* Accordion container */
+.accordian {
+    width: 700px;
+    max-width: 100%;
+}
+
+/* Each item */
+.item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 2px solid #ddd6fe;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Question area */
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    cursor: pointer;
+    background: #7c3aed;
+    color: white;
+}
+
+/* Question */
+.title h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Plus / Minus */
+.title span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Answer */
+.content {
+    padding: 20px;
+    background: #faf5ff;
+    color: #4c1d95;
+    font-size: 15px;
+    line-height: 1.6;
+    border-top: 1px solid #ddd6fe;
+}
+
+/* Hover effect */
+.title:hover {
+    background: #6d28d9;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 30px 15px;
+    }
+
+    .title {
+        padding: 16px;
+    }
+
+    .title h3 {
+        font-size: 16px;
+    }
+
+    .content {
+        padding: 16px;
+    }
+}
+
