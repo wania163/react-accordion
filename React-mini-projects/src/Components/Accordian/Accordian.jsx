@@ -27,18 +27,24 @@ const Accordian = () => {
 
     // Multiple selection
     function handleMultipleSelection(getCurrentId) {
-
+// multiple selested waly array ki copy bnai jo k initially empty hai
         let copyMultipleSelected = [...multipleSelected];
 
         const findIndexOfCurrentId =
+        // if a user clicks id 3 copyMultipleSelected.indexOf(3)
+        // jis id pr user ny click kia hai wo kaya array ma hai??
             copyMultipleSelected.indexOf(getCurrentId);
-
+//  agr id nhi hai 
         if (findIndexOfCurrentId === -1) {
+            // push() array ke end mein new value add karta hai.
+            // agr user  pr click krta hai tu copyMultipleSelected.push(5);
             copyMultipleSelected.push(getCurrentId);
         } else {
+            // Current ID already array mein hai.Iska matlab question already open hai.Agar user dobara us question par click karega, humein usko close karna hai.
             copyMultipleSelected.splice(findIndexOfCurrentId, 1);
+            // splice() array se item remove kar sakta hai.
         }
-
+// jo chnges kiy usko orginal waly ma save bhi krny
         setMultipleSelected(copyMultipleSelected);
     }
 
